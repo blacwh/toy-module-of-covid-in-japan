@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Covid in Japan</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="jquery.japan-map.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <style>
+        #compartments
+        {
+            position: absolute;
+            right: 3%;
+            overflow: auto;
+            width: 45%;
+            height: 100%;
+            border: 3px solid #ccc;
+        }
+        .div-inline
+        {
+            float: left;   
+        }
+        #map-container
+        {
+            width: 50%;
+            height: 80%;
+        }
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        .box
+        {            
+            border:#000000 2px solid;
+            margin:auto;
+            text-align: center;
+            margin-left: 40px;
+            margin-bottom: 20px;
+        }
+        #select-pref-type
+        {
+            width: 50%;
+            /* height: 100px; */
+        }
+        #text
+        {
+            color: #000000;
+            text-align: center;
+            width: 300px;
+            padding: 10px;
+        }
+    </style>
+  </head>
+
+  <body>
+    <div id="container">
+        <div id="left-part">
+            <select id="select-pref-type">
+                <option value="origin">対策なし</option>
+                <option value="planA">6割減</option>
+                <option value="planB">8割減</option>
+            </select>
+
+            <div id="map-container" class="div-inline">
+            </div>   
+            <!-- <h1 id="text"></p> -->
+        </div>  
+        <div id="compartments" class="div-inline">
+            <h1 style="text-align: center;width: auto;">各都道府県の状況</h1>
+            <canvas id="Hokkaido" width="100" height="100" class="box"></canvas>
+            <canvas id="Aomori" width="100" height="100" class="box"></canvas>
+            <canvas id="Iwate" width="100" height="100" class="box"></canvas>
+            <canvas id="Miyagi" width="100" height="100" class="box"></canvas>
+            <canvas id="Akita" width="100" height="100" class="box"></canvas>
+            <canvas id="Yamagata" width="100" height="100" class="box"></canvas>
+            <canvas id="Fukushima" width="100" height="100" class="box"></canvas>
+            <canvas id="Ibaraki" width="100" height="100" class="box"></canvas>
+            <canvas id="Tochigi" width="100" height="100" class="box"></canvas>
+            <canvas id="Gunma" width="100" height="100" class="box"></canvas>
+            <canvas id="Saitama" width="100" height="100" class="box"></canvas>
+            <canvas id="Chiba" width="100" height="100" class="box"></canvas>
+            <canvas id="Tokyo" width="100" height="100" class="box"></canvas>
+            <canvas id="Kanagawa" width="100" height="100" class="box"></canvas>
+            <canvas id="Niigata" width="100" height="100" class="box"></canvas>
+            <canvas id="Toyama" width="100" height="100" class="box"></canvas>
+            <canvas id="Ishikawa" width="100" height="100" class="box"></canvas>
+            <canvas id="Fukui" width="100" height="100" class="box"></canvas>
+            <canvas id="Yamanashi" width="100" height="100" class="box"></canvas>
+            <canvas id="Nagano" width="100" height="100" class="box"></canvas>
+            <canvas id="Gifu" width="100" height="100" class="box"></canvas>
+            <canvas id="Shizuoka" width="100" height="100" class="box"></canvas>
+            <canvas id="Aichi" width="100" height="100" class="box"></canvas>
+            <canvas id="Mie" width="100" height="100" class="box"></canvas>
+            <canvas id="Shiga" width="100" height="100" class="box"></canvas>
+            <canvas id="Kyoto" width="100" height="100" class="box"></canvas>
+            <canvas id="Osaka" width="100" height="100" class="box"></canvas>
+            <canvas id="Hyogo" width="100" height="100" class="box"></canvas>
+            <canvas id="Nara" width="100" height="100" class="box"></canvas>
+            <canvas id="Wakayama" width="100" height="100" class="box"></canvas>
+            <canvas id="Tottori" width="100" height="100" class="box"></canvas>
+            <canvas id="Shimane" width="100" height="100" class="box"></canvas>
+            <canvas id="Okayama" width="100" height="100" class="box"></canvas>
+            <canvas id="Hiroshima" width="100" height="100" class="box"></canvas>
+            <canvas id="Yamaguchi" width="100" height="100" class="box"></canvas>
+            <canvas id="Tokushima" width="100" height="100" class="box"></canvas>
+            <canvas id="Kagawa" width="100" height="100" class="box"></canvas>
+            <canvas id="Ehime" width="100" height="100" class="box"></canvas>
+            <canvas id="Kochi" width="100" height="100" class="box"></canvas>
+            <canvas id="Fukuoka" width="100" height="100" class="box"></canvas>
+            <canvas id="Saga" width="100" height="100" class="box"></canvas>
+            <canvas id="Nagasaki" width="100" height="100" class="box"></canvas>
+            <canvas id="Kumamoto" width="100" height="100" class="box"></canvas>
+            <canvas id="Oita" width="100" height="100" class="box"></canvas>
+            <canvas id="Miyazaki" width="100" height="100" class="box"></canvas>
+            <canvas id="Kagoshima" width="100" height="100" class="box"></canvas>
+            <canvas id="Okinawa" width="100" height="100" class="box"></canvas>
+        </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

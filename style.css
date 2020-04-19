@@ -1,0 +1,30 @@
+#compartments
+{
+    position: absolute;
+    right: 3%;
+    overflow: auto;
+    width: 45%;
+    height: 100%;
+    border: 3px solid #ccc;
+}
+.div-inline
+{
+    float: left;   
+}
+#map-container
+{
+    width: 50%;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+.box
+{            
+    border:#000000 2px solid;
+    margin:auto;
+    text-align: center;
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
